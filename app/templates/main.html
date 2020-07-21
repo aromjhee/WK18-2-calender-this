@@ -10,8 +10,10 @@
     <form action='/' method='post'>
         {{ form.hidden_tag() }}
         <p>Name: {{ form.name() }}</p>
-        <p>Start: {{ form.start_datetime() }}</p>
-        <p>End: {{ form.end_datetime() }}</p>
+        <p>Start Date: {{ form.start_date() }}</p>
+        <p>Start Time: {{ form.start_time() }}</p>
+        <p>End Date: {{ form.end_date() }}</p>
+        <p>End Time: {{ form.end_time() }}</p>
         <p>Description: {{ form.description() }}</p>
         <p>Private? {{ form.private() }}</p>
         <p>{{ form.submit() }} </p>
