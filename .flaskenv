@@ -1,2 +1,1 @@
-FLASK_ENV=development
-SECRET_KEY=1234
+FLASK_APP=calendar_this.py
