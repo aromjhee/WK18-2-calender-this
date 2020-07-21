@@ -7,12 +7,22 @@
 </head>
 <body>
     <h1>Calendar Working!!</h1>
-    <form action='/' method='post'>
+    <form action='' method='post'>
         {{ form.hidden_tag() }}
         <p>Name: {{ form.name() }}</p>
         <p>Start Date: {{ form.start_date() }}</p>
         <p>Start Time: {{ form.start_time() }}</p>
-        <p>End Date: {{ form.end_date() }}</p>
+        <p>End Date: 
+            {{ form.end_date.label }} {{ form.end_date }}
+
+            {% if form.end_date.errors %}
+                <ul class='errors'>
+                    {% for error in form.end_date.errors %}
+                        <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </p>
         <p>End Time: {{ form.end_time() }}</p>
         <p>Description: {{ form.description() }}</p>
         <p>Private? {{ form.private() }}</p>
